@@ -1,8 +1,14 @@
-from TelefonesBr import TelefonesBr
-import re
+from datetime import datetime, timedelta
+from datas_br import DatasBr
 
-telefone = "552126481234"
 
-telefone_objeto = TelefonesBr(telefone)
+cadastro = DatasBr()
+print(cadastro.dia_semana())
+print(cadastro)
 
-print(telefone_objeto)
+'''
+hoje = datetime.today()
+hoje_formatada = hoje.strftime("%d/%m/%Y %H:%M")
+print(hoje)
+print(hoje_formatada)
+'''
