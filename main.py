@@ -1,14 +1,12 @@
-from datetime import datetime, timedelta
-from datas_br import DatasBr
+import requests
+from acesso_cep import BuscaEndereco
+
+cep = "04071045"
+object_cep = BuscaEndereco(cep)
 
 
-cadastro = DatasBr()
-print(cadastro.dia_semana())
-print(cadastro)
+#r = requests.get("https://viacep.com.br/ws/04071045/json/")
+#print(r.text)
 
-'''
-hoje = datetime.today()
-hoje_formatada = hoje.strftime("%d/%m/%Y %H:%M")
-print(hoje)
-print(hoje_formatada)
-'''
+bairro, cidade, uf = object_cep.acessa_via_cep()
+print(bairro, cidade, uf)
